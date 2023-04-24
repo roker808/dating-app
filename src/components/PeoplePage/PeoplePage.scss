@@ -1,0 +1,18 @@
+.people-page {
+  height: 100vh;
+  // display: block;
+  // flex-direction: column;
+  // max-height: 100vh;
+  // overflow-y: hidden;
+
+  &>.title {
+    // flex-grow: 0;
+    // flex-shrink: 0;
+  }
+
+  &>.page-content {
+    // flex-grow: 0;
+    // flex-shrink: 0;
+    // overflow-y: scroll;
+  }
+}

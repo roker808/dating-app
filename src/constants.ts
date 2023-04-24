@@ -1,0 +1,1 @@
+export const defThumb = 'https://johannesippen.com/img/blog/humans-not-users/header.jpg';

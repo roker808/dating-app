@@ -1,0 +1,1 @@
+export const delayMs = <T = void>(ms: number, result: T) => new Promise<T>(rs => window.setTimeout(() => rs(result), ms));

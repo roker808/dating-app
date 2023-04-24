@@ -1,0 +1,62 @@
+.app {
+  // display: flex;
+  // height: 100vh;
+  // position: absolute;
+  // top: 0;
+
+  $nav-width: 200px;
+
+  .app-nav {
+    flex-shrink: 0;
+    // flex-basis: $nav-width;
+    min-width: $nav-width;
+    max-width: $nav-width;
+    height: 100vh;
+    // position: fixed;
+    $border-color: #d9d5d4;
+
+    background-color: #f5f3f2;
+    border: 1px solid $border-color;
+    border-width: 0 1px 0 1px;
+    padding: 10px 0;
+
+    // flex-grow: 0;
+    // flex-shrink: 0;
+    // min-width: $nav-width;
+    // max-width: $nav-width;
+
+    .my-profile-card {
+      padding: 10px 10px 16px 10px;
+
+      .thumb {
+        border-radius: 6px;
+      }
+    }
+
+    ul {
+      border-top: 1px solid $border-color;
+      padding: 0;
+      list-style: none;
+
+      li>a {
+        cursor: pointer;
+        display: block;
+        padding: 10px 10px 5px 10px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &>.content {
+    // position: relative;
+    // top: 0;
+    // margin-left: $nav-width + 10px;
+    // flex-grow: 1;
+    // overflow-y: scroll;
+    // height: 100vh;
+
+    // &::-webkit-scrollbar {
+    //   width: 0px;
+    // }
+  }
+}
