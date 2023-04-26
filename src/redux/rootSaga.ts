@@ -4,6 +4,7 @@ import { appSaga as appSagas } from './app/appSaga';
 import { peopleSagas } from './people/peopleSaga';
 import { personSaga } from './person/personSaga';
 import { dialogsSaga } from './dialogs/dialogsSaga';
+import { messagesSaga } from './messages/messagesSaga';
 
 export default function* rootSaga(): Generator<
   AllEffect<ForkEffect<void>>,
@@ -15,6 +16,7 @@ export default function* rootSaga(): Generator<
     fork(appSagas),
     fork(peopleSagas),
     fork(personSaga),
-    fork(dialogsSaga)
+    fork(dialogsSaga),
+    fork(messagesSaga)
   ]);
 }

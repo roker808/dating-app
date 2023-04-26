@@ -1,3 +1,4 @@
+import { defThumb } from "../constants";
 import { delayMs } from "../core/utils";
 import { authService } from "./AuthService";
 import { IProfile } from "./Profile";
@@ -54,6 +55,14 @@ class ProfilesService {
       .map(({ profile }) => profile);
 
     return delayMs(1000, profiles);
+  }
+
+  findProfileUri(profileId: string) {
+    return profilesAll.find(x => x.id === profileId)?.thumbnailUri ?? defThumb;
+  }
+
+  findProfileName(profileId: string) {
+    return profilesAll.find(x => x.id === profileId)?.name;
   }
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Page } from "../Page/Page";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { personActions } from "../../redux/person/personSlice";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Spinner } from "../Spinner";
 import { defThumb } from "../../constants";
 
@@ -21,9 +21,7 @@ export const PersonPage: React.FC<IPersonPageProps> = () => {
   const me = pid === 'me';
   profile = me ? myProfile : profile;
   
-  const init = profile
-    ? undefined
-    : (() => dispatch(personActions.fetchProfile(pid!)));
+  const init = () => dispatch(personActions.fetchProfile(pid!));
 
   return (
     <Page title={(me ? 'Me: ' : '') + (profile?.name || 'Person')} className="person-page" onMount={init}>
@@ -47,7 +45,7 @@ export const PersonPage: React.FC<IPersonPageProps> = () => {
               me ? undefined : (
                 <div className="row">
                   <div className="col-4">
-                    <button type="button" className="btn btn-primary msg-btn">Send message</button>
+                    <Link to={`/dialogs/${profile.id}`} className="btn btn-primary msg-btn">Send message</Link>
                   </div>
                 </div>
               )

@@ -11,6 +11,7 @@ import { PeoplePage } from './components/PeoplePage/PeoplePage';
 import './index.scss';
 import { PersonPage } from './components/PersonPage/PersonPage';
 import { DialogsPage } from './components/DialogsPage/DialogsPage';
+import { MessengerPage } from './components/MessengerPage/MessengerPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,6 +27,7 @@ root.render(
             <Route path='people' Component={PeoplePage}/>
             <Route path='people/:pid' Component={PersonPage}/>
             <Route path='dialogs' Component={DialogsPage}/>
+            <Route path='dialogs/:other' Component={MessengerPage}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -26,10 +26,11 @@ export const appSlice = createSlice({
       state.token = action.payload[1];
     },
     authenticated: (_, __: PayloadAction<[string, string, (path: string) => void]>) => {},
-    signOut: (_, __: PayloadAction<(path: string) => void>) => {},
+    signOut: (state, __: PayloadAction<(path: string) => void>) => {},
     clearData: (state) => {
       state.profileId = undefined;
       state.token = undefined;
+      state.profile = undefined;
     },
     fetchAppProfile: (state, action: PayloadAction<string>) => {},
     appProfileFetched: (state, action: PayloadAction<IProfile>) => {

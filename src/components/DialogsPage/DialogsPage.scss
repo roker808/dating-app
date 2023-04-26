@@ -1,0 +1,26 @@
+.dialogs-page {
+  .dialogs-list {
+    list-style: none;
+    padding: 0;
+
+    &>li>a {
+
+      text-decoration: none;
+
+      .dialog {
+        padding: 5px;
+        border-bottom: 1px solid gray;
+
+        &:hover {
+          background-color:darksalmon;
+        }
+  
+        .thumb {
+          img {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

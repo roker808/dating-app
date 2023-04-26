@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IProfile } from '../../services/Profile';
+import { stat } from 'fs';
 
 export interface IPeopleState {
   profiles?: IProfile[];
@@ -12,7 +13,7 @@ export const peopleSlice = createSlice({
   name: 'people',
   initialState,
   reducers: {
-    fetchProfiles: () => {},
+    fetchProfiles: (state) => { state.profiles = undefined; },
     profilesFetched: (state, action: PayloadAction<IProfile[]>) => {state.profiles = action.payload;}
   },
 });

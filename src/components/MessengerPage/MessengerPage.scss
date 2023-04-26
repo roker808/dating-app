@@ -1,0 +1,49 @@
+.messages-page {
+  .other-header {
+    .thumb {
+      max-height: 70px;
+      border-radius: 50%;
+    }
+
+    .online {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: green;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+  }
+
+  .messanger-ui {
+    
+
+    .history {
+      // border: 1px solid gray;
+      height: 75vh;
+      overflow-y: scroll;
+
+      .message {
+        text-align: right;
+
+        &.other-sender {
+          text-align: left;
+        }
+
+        .text {
+          display: inline-block;
+          margin: 0;
+
+          padding: 10px;
+          margin: 5px;
+          border-radius: 3px;
+          background-color: coral;
+        }
+      }
+    }
+  }
+}

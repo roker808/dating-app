@@ -46,7 +46,7 @@ export const AppBootstrapper: React.FC<IAppBootstrapperProps> = () => {
           <ul>
             <li><Link to='/people/me'>Profile</Link></li>
             <li><Link to='/people'>People</Link></li>
-            <li><Link to='/dialogs'>Messages</Link></li>
+            <li><Link to='/dialogs'>Dialogs</Link></li>
             <li><a href='/signout' onClick={signOut}>Sing Out</a></li>
           </ul>
         </div>

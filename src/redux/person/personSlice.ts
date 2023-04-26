@@ -11,7 +11,7 @@ const initialState: IPersonState = {
 };
 
 export const personSlice = createSlice({
-  name: 'app',
+  name: 'person',
   initialState,
   reducers: {
     loading: (state, action: PayloadAction<boolean>) => {
