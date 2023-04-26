@@ -51,8 +51,8 @@ export const MessengerPage = () => {
           <div className="messanger-ui">
             <div className="history">
               {
-                messages && messages.map(m => (
-                  <div key={`${m.senderId}${m.recipientId}${m.timestamp}`} className={classNames('message', m.senderId === myId ? 'me-sender' : 'other-sender')}>
+                messages && messages.map((m, i) => (
+                  <div key={`${m.senderId}${m.recipientId}${m.timestamp}${i}`} className={classNames('message', m.senderId === myId ? 'me-sender' : 'other-sender')}>
                     <p className="text">{m.message}</p>
                   </div>
                 ))
